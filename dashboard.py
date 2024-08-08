@@ -126,7 +126,7 @@ def pvalue_num_features():
 
         # Plotting
         p_values_df_sorted = anova_results_df.sort_values(by='P-Value', ascending=False)
-
+        anova_results_df = anova_results_df.sort_values(by='P-Value', ascending=False)
         fig = px.bar(p_values_df_sorted, x=p_values_df_sorted.index, y='P-Value', color_discrete_sequence=['blue'])
         fig.add_hline(y=0.05, line_color='red', line_dash='dash', annotation_text='Significance Level = 0.05')
         fig.update_layout(title='ANOVA Test P-Values for Numerical Features',
