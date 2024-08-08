@@ -88,7 +88,7 @@ def pvalue_cat_features():
         results_df.set_index('Feature', inplace=True)
         # Plotting
         results_df = pd.DataFrame(results, columns=['Feature', 'P-Value'])
-
+        results_df = results_df.sort_values(by='P-Value')
         # Plotting
         fig = px.bar(results_df.sort_values(by='P-Value', ascending=False), 
                     x='Feature', y='P-Value', 
@@ -119,6 +119,8 @@ def pvalue_num_features():
             _, p = f_oneway(group1, group2)
             anova_results.append([feature, p])
         anova_results_df = pd.DataFrame(anova_results, columns=['Feature', 'P-Value'])
+        anova_results_df = anova_results_df.sort_values(by='P-Value')
+
         # Set the 'Feature' column as the index of the DataFrame
         anova_results_df.set_index('Feature', inplace=True)
 
