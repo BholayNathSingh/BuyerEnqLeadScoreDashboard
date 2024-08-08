@@ -8,7 +8,7 @@ from scipy.stats import chi2_contingency
 from scipy.stats import f_oneway
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-
+import os
 
 
 st.set_page_config(
@@ -21,8 +21,20 @@ st.markdown("<h1 style='text-align: center;'>Buyer Enquiry Dashboard</h1>", unsa
 
 
 
-file_path = r'.\Dataset\df_success_dropped.xlsx'
+
+
+
+# Get the directory where the script is located
+script_dir = os.path.dirname(__file__)
+ 
+# Define the relative path to the Dataset folder and the Excel file
+file_path = os.path.join(script_dir, "Dataset", "df_success_dropped.xlsx") 
+
+
+#file_path = r'.\Dataset\df_success_dropped.xlsx'
 df_demand_supply = pd.read_excel(file_path,parse_dates = True)
+
+
 
 
 
