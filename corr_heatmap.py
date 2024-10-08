@@ -8,7 +8,7 @@ def corr_heatmap(df):
         #Correlation Heatmap
         numeric_df = df.select_dtypes(include=['number'])
         corr_matrix = numeric_df.corr()
-        fig = px.imshow(corr_matrix, text_auto=True, color_continuous_scale='Blues')
+        fig = px.imshow(corr_matrix, text_auto=True, color_continuous_scale='Blues',width=800,height=600)
         fig.update_layout(title='Correlation Matrix',
                         xaxis_title='',
                         yaxis_title='')
