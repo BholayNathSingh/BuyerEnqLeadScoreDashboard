@@ -18,7 +18,7 @@ def data_distribution():
     
     # Radio buttons placed in the first column
     with col1:
-        data_selection = st.radio("Select Data", ['All Data', 'Only Success Dropped'], horizontal=True)
+        data_selection = st.radio("Select Data", ['All Data', 'Success and Dropped'], horizontal=True)
 
     # Filter the data based on the radio button selection
     if data_selection == 'All Data':
@@ -26,7 +26,7 @@ def data_distribution():
         st.subheader("Distribution for All Data")
     else:
         df = df_success_dropped
-        st.subheader("Distribution for Only Success Dropped")
+        st.subheader("Distribution for Only Success and Dropped")
 
     # Get the value counts of "Enquiry Status"
     enquiry_status_counts = df['Enquiry Status'].value_counts()

@@ -12,9 +12,9 @@ def stacked_bar(df):
 
         # Create a dropdown menu
         graph_options = [
-            'Stacked bar for Success Dropped wrt Mfg Year',
-            'Stacked bar graph for Success Dropped wrt (top 30) Budget From',
-            'Stacked bar graph for Success Dropped wrt (top 30) Budget To'
+            'Stacked bar for Success and Dropped wrt Mfg Year',
+            'Stacked bar graph for Success and Dropped wrt (top 30) Budget From',
+            'Stacked bar graph for Success and Dropped wrt (top 30) Budget To'
         ]
         selected_graph = st.selectbox('Select a Stacked bar graph:', graph_options)
 
@@ -78,9 +78,9 @@ def stacked_bar(df):
 
 
 
-        if selected_graph == 'Stacked bar for Success Dropped wrt Mfg Year':
+        if selected_graph == 'Stacked bar for Success and Dropped wrt Mfg Year':
             stackedbar_mfg_yr()
-        elif selected_graph == 'Stacked bar graph for Success Dropped wrt (top 30) Budget From':
+        elif selected_graph == 'Stacked bar graph for Success and  Dropped wrt (top 30) Budget From':
             stackedbar_budget_from()
-        elif selected_graph == 'Stacked bar graph for Success Dropped wrt (top 30) Budget To':
+        elif selected_graph == 'Stacked bar graph for Success and Dropped wrt (top 30) Budget To':
             stackedbar_budget_to()

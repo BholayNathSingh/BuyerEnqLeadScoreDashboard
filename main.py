@@ -21,6 +21,7 @@ st.set_page_config(
 )
 
 # Set up sidebar
+st.sidebar.header("Buyer Enquiry Leadscore Analysis")
 st.sidebar.subheader("Select EDA Options")
 
 # Create radio buttons for Particular EDA

@@ -181,7 +181,7 @@ def bivariate_charts(df):
                     xaxis_title='Manufacturing Year',
                     yaxis_title='Count',
                     yaxis=dict(title='Count',showgrid = False),
-                    yaxis2=dict(title='Success Rate', overlaying='y', side='right', range=[0, 105], tickformat=".0f",showgrid = False),
+                    yaxis2=dict(title='Success Rate(%)', overlaying='y', side='right', range=[0, 105], tickformat=".0f",showgrid = False),
                     legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1)
                 )
                 for i, v in enumerate(year_enq_grouped['Total']):
