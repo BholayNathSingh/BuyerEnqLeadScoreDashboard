@@ -18,14 +18,14 @@ def data_summary(df):
     try:
         data = pd.read_excel(data_file)
         #st.write(data.to_string(index=False))
-        #st.dataframe(data, width=None, height=None, hide_index=True)
-        numeric_cols = ["nData","nVar","nVar with <30% missing","nVar with 30%-80% missing","nVar with 80%-100% missing"]
-        gb = GridOptionsBuilder.from_dataframe(data)
-        for col in numeric_cols:
-            gb.configure_column(col,type=["numericColumn","numberColumnFilter"],align='right')
+        st.dataframe(data, width=None, height=None, hide_index=True)
+        # numeric_cols = ["nData","nVar","nVar with <30% missing","nVar with 30%-80% missing","nVar with 80%-100% missing"]
+        # gb = GridOptionsBuilder.from_dataframe(data)
+        # for col in numeric_cols:
+        #     gb.configure_column(col,type=["numericColumn","numberColumnFilter"],align='right')
             
-        gb.configure_grid_options(autoSizeColumnsMode='autoSizeColumns')
-        AgGrid(data,gridOptions=gb.build(),width=None,height=None)
+        # gb.configure_grid_options(autoSizeColumnsMode='autoSizeColumns')
+        # AgGrid(data,gridOptions=gb.build(),width=None,height=None)
         #st.write(data)
     except FileNotFoundError:
         st.error(f"File not found: {data_file}")
