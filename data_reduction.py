@@ -8,6 +8,7 @@ def data_reduction():
     st.header("Data Reduction")
     # Load the data from the Excel file
     data_file = 'Dataset/Data_Reduction.xlsx'
+    
     try:
         # Load the data and reset the index
         data = pd.read_excel(data_file, index_col=False)
