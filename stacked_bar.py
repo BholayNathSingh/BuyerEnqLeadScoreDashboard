@@ -7,7 +7,7 @@ import plotly.express as px
 
 def stacked_bar(df):
         #Stacked bar for Success Dropped wrt Mfg Year
-        st.markdown("<h3 style='text-align: center;'>Stacked bar for Success Dropped</h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center;'>Stacked bar for Success and Dropped</h1>", unsafe_allow_html=True)
 
 
         # Create a dropdown menu
@@ -67,7 +67,7 @@ def stacked_bar(df):
         def stackedbar_budget_to():
                 grouped_data = df.groupby(['Budget To', 'Enquiry Status'], sort=True).size().reset_index(name='Count')
                 pivot_table = grouped_data.pivot_table(index='Budget To', columns='Enquiry Status', values='Count', fill_value=0)
-                desired_order = ['Dropped', 'Success']
+                desired_order = ['Dropped', 'Success']                
                 pivot_table = pivot_table[desired_order]
                 top_30_budgets = pivot_table.sum(axis=1).nlargest(30).index
                 pivot_table = pivot_table.loc[top_30_budgets]
