@@ -40,7 +40,7 @@ def variable_reduction():
     fig.update_layout(
         title="nVariable Reduction",
         xaxis_title="Category",
-        yaxis_title="Value",
+        yaxis_title="Count",
         width=800,
         height=600,
         xaxis=dict(
