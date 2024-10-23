@@ -13,12 +13,13 @@ def variable_reduction():
         {"label": "Dropping Var with S No.", "value": -1},
         {"label": "Adding Var with nBuyerOpenEnq in last 3 weeks", "value": 1},
         #{"label": "Adding Var with nBuyerCumulativeOpenEnq in last 1 month", "value": 1},
-        {"label": "Adding Var with nBuyerClosedEnq in last 3 weeks", "value": 1},
+        #{"label": "Adding Var with nBuyerClosedEnq in last 3 weeks", "value": 1},
         {"label": "Adding Var with nSellerEnq in last 3 weeks", "value": 1},
         {"label": "Adding Var with nPurchase in last 3 weeks", "value": 1},
         {"label": "Adding Var with nSale in last 3 weeks", "value": 1},
         {"label": "Adding Var with Temporary_Model_Name", "value": 1},
         {"label": "Adding Var with nCurrent_Unsold_Stock on the day before", "value": 1},
+        {"label": "Dropping Var with Domain Knowledge", "value": -12},
         {"label": "Total", "value": 1},
     ]
 
