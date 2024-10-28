@@ -10,8 +10,8 @@ from stacked_bar import stacked_bar
 from variable_reduction import variable_reduction
 from data_reduction import data_reduction
 from data_distribution import data_distribution
-from open_enq_frq import open_enq_frq
-# from model_eval import model_eval
+# from open_enq_frq import open_enq_frq
+from model_eval import model_eval
 
 
 # Set page configuration
@@ -35,7 +35,7 @@ particular_eda_options = [
     'Correlation',
     'Bivariate Charts',
     'Stacked Bar Charts',
-    #'Model Evaluation'
+    'Model Evaluation'
 ]
 particular_eda_selected = st.sidebar.radio("EDA Options", particular_eda_options, index=0)
 
@@ -73,8 +73,8 @@ def plot_bivariate_charts():
 def plot_stacked_bar():
     stacked_bar(df_Buyer_data)
 
-# def plot_model_eval():
-#     model_eval()
+def plot_model_eval():
+     model_eval()
 
 # def plot_open_enq_freq():
 #     open_enq_frq()
@@ -98,5 +98,5 @@ elif particular_eda_selected == 'Bivariate Charts':
     plot_bivariate_charts()
 elif particular_eda_selected == 'Stacked Bar Charts':
     plot_stacked_bar()
-# elif particular_eda_selected == 'Model Evaluation':
-#     plot_model_eval()
+elif particular_eda_selected == 'Model Evaluation':
+    plot_model_eval()
